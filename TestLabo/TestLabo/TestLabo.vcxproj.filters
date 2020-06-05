@@ -18,5 +18,8 @@
     <ClCompile Include="TestLabo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="apr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
