@@ -6,8 +6,13 @@
 using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Hello World con corona!\n";
     cout << "Hola" << endl;
+    cout << sumar(5, 5);
+}
+
+int sumar(int a, int b) {
+    return a + b;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
