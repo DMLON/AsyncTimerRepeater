@@ -6,6 +6,7 @@
 using namespace std;
 int main()
 {
+    std::cout << "Hello World!\n";
     std::cout << "Hello World con corona!\n";
     cout << "Hola" << endl;
     cout << sumar(5, 5);
