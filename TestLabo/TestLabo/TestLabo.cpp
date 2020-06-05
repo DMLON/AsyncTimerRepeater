@@ -13,7 +13,7 @@ int main()
 }
 
 int sumar(int a, int b) {
-    return a + b;
+    return a - b;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
