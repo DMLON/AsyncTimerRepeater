@@ -148,9 +148,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="apr.cpp" />
+    <ClCompile Include="AsyncTimer.cpp" />
     <ClCompile Include="TestLabo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AsyncRepeater.h" />
+    <ClInclude Include="AsyncTimer.h" />
+    <ClInclude Include="AsyncTimerFactory.h" />
+    <ClInclude Include="cLista.h" />
     <ClInclude Include="lista.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

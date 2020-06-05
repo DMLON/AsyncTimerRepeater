@@ -23,13 +23,13 @@ class Sucesos : protected lista<Suceso> {
 public:
 	static Sucesos ListaSucesos;
 	void Registrar(Persona* s,string QuePaso) {
-		Agregar(new Suceso(Datetime.today, s.nombre + ": " + QuePaso));
+		//Agregar(new Suceso(Datetime.today, s.nombre + ": " + QuePaso));
 	}
 };
-
-void main() {
-	Sucesos::ListaSucesos.Registrar()
-}
+//
+//void main() {
+//	//Sucesos::ListaSucesos.Registrar()
+//}
 
 
 
