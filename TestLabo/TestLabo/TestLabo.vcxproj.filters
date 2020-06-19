@@ -44,5 +44,8 @@
     <ClInclude Include="cLista.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AsyncRepeaterFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

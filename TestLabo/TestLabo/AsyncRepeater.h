@@ -5,6 +5,7 @@
 #include <functional>
 #include <thread>
 #include <cstdarg> // needed to use ellipsis
+#include <string>
 
 
 /**
@@ -26,6 +27,7 @@ public:
 		m_interval = interval;
 	}
 
+	std::string getclave() { return std::to_string(rand()); }
 	/**
 	 * Starting the timer.
 	 */
@@ -34,9 +36,12 @@ public:
 		//(context.*m_func)();
 		m_thread = std::thread([&]() {
 			while (m_running) {
-				auto delta = std::chrono::steady_clock::now() + std::chrono::milliseconds(m_interval);
-				(context.*m_func)();
-				std::this_thread::sleep_until(delta);
+				try {
+					auto delta = std::chrono::steady_clock::now() + std::chrono::milliseconds(m_interval);
+					(context.*m_func)();
+					std::this_thread::sleep_until(delta);
+				}
+				catch (...) {}
 			}
 		});
 		m_thread.detach();

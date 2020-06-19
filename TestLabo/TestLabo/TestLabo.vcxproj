@@ -154,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AsyncRepeater.h" />
+    <ClInclude Include="AsyncRepeaterFactory.h" />
     <ClInclude Include="AsyncTimer.h" />
     <ClInclude Include="AsyncTimerFactory.h" />
     <ClInclude Include="cLista.h" />

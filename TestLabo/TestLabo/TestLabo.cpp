@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "AsyncTimerFactory.h"
+#include "AsyncRepeaterFactory.h"
 
 using namespace std;
 
@@ -28,11 +29,16 @@ class B {
 public:
     B(int aa) :a(aa) {
         //En 0.5 segundos llama a imprimir
-        AsyncTimerFactory<B>::NewTimer(500, this, &B::Imprimir);
+        AsyncRepeaterFactory<B>::NewTimer(250, this, &B::Imprimir);
+        AsyncTimerFactory<B>::NewTimer(5000, this, &B::CancelarTimer);
     };
 
     void Imprimir() {
-        cout << "Hola " << a << endl;
+        cout << "Hola soy B: " << a << endl;
+    }
+
+    void CancelarTimer() {
+        AsyncRepeaterFactory<B>::StopRepeater();
     }
 
     ~B() {
