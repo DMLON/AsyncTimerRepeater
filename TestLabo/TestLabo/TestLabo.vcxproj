@@ -159,6 +159,7 @@
     <ClInclude Include="AsyncTimerFactory.h" />
     <ClInclude Include="cLista.h" />
     <ClInclude Include="lista.h" />
+    <ClInclude Include="Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

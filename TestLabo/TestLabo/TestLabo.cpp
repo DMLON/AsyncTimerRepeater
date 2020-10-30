@@ -4,6 +4,7 @@
 #include <iostream>
 #include "AsyncTimerFactory.h"
 #include "AsyncRepeaterFactory.h"
+#include "Timer.h"
 
 using namespace std;
 
@@ -46,7 +47,6 @@ public:
     }
 };
 
-
 void hola() {
     cout << "hola";
 }
@@ -60,5 +60,10 @@ int main()
     cout << "Hola" << endl;
     A holinga(50);
     B holanga(10);
+
+    Timer t2{ 3500,[]() {std::cout << "---------------- I waited to print! ----------------\n"; } };
+    Timer t1{ 3000,[]() {std::cout << "---------------- I waited to print! ----------------\n"; }};
+
     cin.get();
+
 }
